@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU CPC Member Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-container"></div>
+
+    <main class="glass-container">
+        <div class="header">
+            <img src="logo.png" alt="DIU CPC Logo" class="logo">
+            <h1>Membership ID Cheaker</h1>
+            <p>Access your DIU Computer Programming Club membership details.</p>
+        </div>
+
+        <div class="search-section">
+            <form id="searchForm">
+                <div class="input-group">
+                    <input type="email" id="emailInput" placeholder="Enter your registered email" required
+                        autocomplete="email">
+                    <button type="submit" id="searchBtn">
+                        <span id="btnText">Verify ID</span>
+                        <div class="spinner" id="btnSpinner"></div>
+                    </button>
+                </div>
+                <div class="error-message" id="errorMsg"></div>
+            </form>
+        </div>
+
+        <div class="result-card hidden" id="resultCard">
+            <div class="success-icon">✓</div>
+            <h2>Member Verified</h2>
+            <div class="member-grid">
+                <div class="data-group">
+                    <span class="label">Name</span>
+                    <span class="value" id="resName">--</span>
+                </div>
+                <div class="data-group highlighted">
+                    <span class="label">Member ID</span>
+                    <span class="value" id="resMemberId">--</span>
+                </div>
+                <div class="data-group">
+                    <span class="label">Batch</span>
+                    <span class="value" id="resBatch">--</span>
+                </div>
+                <div class="data-group">
+                    <span class="label">Roll Number</span>
+                    <span class="value" id="resRoll">--</span>
+                </div>
+                <div class="data-group">
+                    <span class="label">Registration</span>
+                    <span class="value" id="resRegistration">--</span>
+                </div>
+                <div class="data-group">
+                    <span class="label">Department</span>
+                    <span class="value" id="resDept">--</span>
+                </div>
+                <div class="data-group">
+                    <span class="label">Phone</span>
+                    <span class="value" id="resPhone">--</span>
+                </div>
+                <div class="data-group">
+                    <span class="label">Joining Year</span>
+                    <span class="value" id="resJoined">--</span>
+                </div>
+            </div>
+
+            <button class="reset-btn" id="resetBtn">Search Another</button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
