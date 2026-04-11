@@ -61,7 +61,7 @@ const loginLimiter = rateLimit({
 // Cache the database in memory for fast lookup
 let members = [];
 let deletedMembers = [];
-const CSV_FILE = '11 april 2026 cpc member database - consolidated_cpc_members_final (1).csv';
+const CSV_FILE = '11 april 2026 cpc member database - consolidated_cpc_members_final.csv';
 const DELETED_CSV_FILE = 'deleted_members.csv';
 
 // Predefined exact CSV Headers
