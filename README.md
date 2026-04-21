@@ -25,23 +25,5 @@ This project serves as a secure search portal and admin dashboard for the DIU Co
    ```bash
    node server.js
    ```
-4. Access the Member search portal: `http://localhost:3000`
-5. Access the **Admin Dashboard**: `http://localhost:3000/admin.html`
+4. Access the Member search portal: `https://cpc-membership-id-cheaker.onrender.com`
 
-## Changing the Admin Credentials
-
-For extreme security, we do not allow changing passwords via the Web UI (which is often a vulnerability point). Instead, it must be changed by the server owner locally. 
-
-
-**To generate a new highly secure password hash:**
-1. Open a terminal in the project directory.
-2. Run this command in your terminal (Replace `YourNewPassword123!` with your desired password):
-   ```bash
-   node -e "console.log(require('bcryptjs').hashSync('YourNewPassword123!', 10))"
-   ```
-3. Copy the output hash (it will look somewhat like `$2a$10$WwO5...`).
-4. Open the `.env` file in the project.
-5. Replace the value of `ADMIN_PASSWORD_HASH=` with your newly copied hash.
-6. Restart your server.
-
-Your new password is now perfectly secure!
